@@ -1,8 +1,8 @@
 import List from "./pages/List";
-import type { i18n } from "i18next";
+import i18n from "./i18n";
 
 function App() {
-  return <List i18n={{} as i18n} />;
+  return <List i18n={i18n} />;
 }
 
 export default App;

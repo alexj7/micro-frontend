@@ -40,8 +40,6 @@ const LanguageSelector = () => {
     i18n.changeLanguage(lng);
   };
 
-  
-
   return (
     <Wrapper>
       <Button

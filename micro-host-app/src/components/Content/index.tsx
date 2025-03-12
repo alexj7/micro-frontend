@@ -12,14 +12,14 @@ interface Props {
   i18n: i18n;
 }
 
-const ContentDisplay = ({ selected, i18n }: Props) => {
+const ContentDisplay = ({ selected }: Props) => {
   const { t } = useTranslation();
 
   return (
     <Content>
       <Suspense fallback={<Loader>{t("loading")}</Loader>}>
-        {selected === "MCList1" && <MCList1 i18n={i18n} />}
-        {selected === "MCList2" && <MCList2 i18n={i18n} />}
+        {selected === "MCList1" && <MCList1 />}
+        {selected === "MCList2" && <MCList2 />}
       </Suspense>
     </Content>
   );

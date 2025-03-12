@@ -65,7 +65,8 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
   species,
   gender,
 }) => {
-  const { t } = useTranslation();
+
+  const {t} = useTranslation();
 
   return (
     <Card>
