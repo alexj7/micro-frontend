@@ -11,7 +11,7 @@ export default defineConfig({
         'micro-character-list-1': 'http://localhost:3001/assets/remoteEntry.js',
         'micro-character-list-2': 'http://localhost:3002/assets/remoteEntry.js',
       },
-      shared: ['react', 'react-dom'],
+      shared: ['react', 'react-dom', 'react-i18next', 'i18next'],
     }),
   ],
   build: {
