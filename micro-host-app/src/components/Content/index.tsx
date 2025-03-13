@@ -14,11 +14,10 @@ const ContentDisplay = ({ selected }: Props) => {
 
   return (
     <Content>
-      <Loader>{t("loading")}</Loader>
-      {/* <Suspense fallback={<Loader>{t("loading")}</Loader>}>
+      <Suspense fallback={<Loader>{t("loading")}</Loader>}>
         {selected === "MCList1" && <MCList1 />}
         {selected === "MCList2" && <MCList2 />}
-      </Suspense> */}
+      </Suspense>
     </Content>
   );
 };
