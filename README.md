@@ -38,6 +38,7 @@ micro-frontend/
 Version de node utilizada v18.19.1
 
 - Node.js (v18 o superior)
+- Variables .env (para facilitar se ha subido el .env con valores locales)
 
 ## Cómo ejecutar:
 1. Clonar el repo
@@ -74,3 +75,11 @@ Version de node utilizada v18.19.1
     cd host
     npm run dev
     ```
+
+## Producción (Deploy en Vercel)
+
+| Proyecto                   | URL Producción                             |
+|----------------------------|--------------------------------------------|
+| **Host (Container App)**   | [https://micro-frontend-mng8.vercel.app/](https://micro-frontend-mng8.vercel.app/)      |
+| **Rick and Morty Micro**   | [https://micro-frontend-orcin-chi.vercel.app/](https://micro-frontend-orcin-chi.vercel.app/) |
+| **Harry Potter Micro**     | [https://micro-frontend-qmfd.vercel.app/](https://micro-frontend-qmfd.vercel.app/) |

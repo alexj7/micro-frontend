@@ -18,7 +18,7 @@ export const Container = styled.div`
   justify-content: center;
   min-height: 100vh;
   padding: 20px;
-  gap: 24px;
+  gap: 32px;
   background: ${colors.background};
 `;
 
@@ -28,6 +28,11 @@ export const Title = styled.h1`
   margin: 0;
   text-align: center;
   font-weight: 600;
+
+  @media (max-width: 768px) {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
 `;
 
 export const ButtonGroup = styled.div`
@@ -62,7 +67,7 @@ export const Button = styled.button<{ active?: boolean }>`
 `;
 
 export const Content = styled.div`
-  width: 100%;
+  width: calc(100% - 40px);
   max-width: 1300px;
   min-height: calc(100vh - 200px);
   background: ${colors.cardBackground};

@@ -5,6 +5,7 @@ const CharacterList = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 32px;
   padding: 24px;
+  place-items: center;
 `;
 
 export default CharacterList;

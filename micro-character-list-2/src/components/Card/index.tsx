@@ -30,6 +30,7 @@ const Card = styled.div`
   align-items: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
+  margin: 0 auto;
 
   &:hover {
     transform: translateY(-5px);
