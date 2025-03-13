@@ -67,7 +67,7 @@ export const Button = styled.button<{ active?: boolean }>`
 `;
 
 export const Content = styled.div`
-  width: calc(100% - 40px);
+  width: 100vw;
   max-width: 1300px;
   min-height: calc(100vh - 200px);
   background: ${colors.cardBackground};
@@ -77,6 +77,10 @@ export const Content = styled.div`
 `;
 
 export const Loader = styled.div`
+  width: calc(100% - 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.2rem;
   color: ${colors.text};
   text-align: center;
