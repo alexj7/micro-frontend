@@ -1,54 +1,61 @@
-# React + TypeScript + Vite
+# 🧬 Microfrontend - Harry Potter Character List
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este microfrontend muestra un listado de personajes de Harry Potter. Está diseñado para funcionar de forma independiente o integrado dentro de un Host mediante Module Federation.
 
-Currently, two official plugins are available:
+## 🚀 Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-	Listado de personajes de Harry Potter.
+-	Totalmente funcional por sí solo
+-	Compatible con integración vía Module Federation (Federación de módulos).
 
-## Expanding the ESLint configuration
+## ⚙️ Instalación
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1. Instalar dependencias:
+    ```bash
+    npm install
+    ```
+2. Levantar en local
+   ```bash
+    npm run start
+    ```
+3. Correr test
+    ```bash
+    npm run test
+    npm run test:watch
+    ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🗂️ Estructura del Proyecto
+
+```bash
+src/
+ ├── assets/                # Assets visuales
+ ├── components/            # Componentes visuales
+ │    └── Card              # Carpete para agrupar ficheros de un component
+ │      └── index.tsx       # logica del componente
+ │      └── __tests__       # Test del componente
+ ├── hooks/                 # Hooks compartidos generales para utilizar en la app 
+ ├── i18n/                  # Dependencia individual en caso de ser inicializado de forma dependiente
+ ├── pages/                 # Componentes a ser expuestos como microfrontends
+ ├── services/              # Peticiones API
+ ├── styles/                # Estilos locales
+ │    └── layout.ts
+ ├── App.tsx                # Componente principal
+ ├── main.tsx               # Entry point React
+ ├── i18n.ts                # Configuración de i18n
+ └── __tests__/             # Pruebas unitarias
+vite.config.ts              # Configuración Vite + Module Federation
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tecnologías
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React 19
+- Vite + vite-plugin-federation
+- Module Federation (Federación de módulos de Vite/Webpack 5)
+- TypeScript
+- i18next (Internacionalización)
+- Styled-components (opcional, según tus estilos)
+- Vitest + React Testing Library (Pruebas unitarias)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## API
+
+API publica pata obtener los personajes de Harry Potter: [API Documentation](https://hp-api.onrender.com/api/characters)

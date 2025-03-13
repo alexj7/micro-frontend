@@ -1,54 +1,61 @@
-# React + TypeScript + Vite
+# 📦 App Host - Microfrontends Container
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositorio corresponde al **Host** principal que consume los distintos microfrontends de la aplicación mediante **Module Federation**.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Descripcion
 
-## Expanding the ESLint configuration
+El Host es la aplicación central que orquesta y consume microfrontends como:
+- Lista de personajes de Rick and Morty 
+- Lista de personajes de Harry Potter
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+El Host se encarga de:
+- Definir la navegación y lógica principal.
+- Importar dinámicamente los micros.
+- Proveer dependencias comunes como React, React DOM, i18next, etc.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+
+## ⚙️ Instalación
+
+1. Instalar dependencias:
+    ```bash
+    npm install
+    ```
+2. Levantar en local
+   ```bash
+    npm run start
+    ```
+3. Correr test
+    ```bash
+    npm run test
+    npm run test:watch
+    ```
+
+## 🗂️ Estructura del Proyecto
+
+``` bash
+src/
+ ├── components/
+ │    ├── Header.tsx               
+ │    ├── Content.tsx               # Componente donde se cargan los microfrontend 
+ │    ├── LanguageSelector.tsx
+ ├── styles/
+ │    └── layout.ts
+ ├── App.tsx                        # Componente principal con navegación y carga de micros
+ ├── main.tsx                       # Entry point React
+ ├── i18n.ts                        # Configuración de internacionalización
+ └── __tests__/                     # Tests unitarios
+vite.config.ts                      # Configuración Vite y Module Federation
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tecnologías
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- React 19
+- Vite + vite-plugin-federation
+- Module Federation (Federación de módulos de Vite/Webpack 5)
+- TypeScript
+- i18next (Internacionalización)
+- Styled-components (opcional, según tus estilos)
+- Vitest + React Testing Library (Pruebas unitarias)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+
