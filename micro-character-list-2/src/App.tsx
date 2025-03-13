@@ -1,8 +1,14 @@
+import LanguageSelector from "./components/LanguageSelector";
+import "./i18n";
 import List from "./pages/List";
-import i18n from "./i18n";
 
 function App() {
-  return <List i18n={i18n} />;
+  return (
+    <>
+      <LanguageSelector />
+      <List />;
+    </>
+  );
 }
 
 export default App;
