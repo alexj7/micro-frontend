@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 import react from '@vitejs/plugin-react';
 import federation from '@originjs/vite-plugin-federation';
 
@@ -23,12 +23,10 @@ export default defineConfig({
   server: {
     cors: true,
     port: 3000,
-    proxy: {
-      '/assets/remoteEntry.js': {
-        target: 'http://localhost:3001',
-        changeOrigin: true,
-        secure: false,
-      },
-    },
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './src/setupTests.ts',
   },
 });

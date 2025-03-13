@@ -1,20 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "jsx": "react-jsx",
-    "strict": true,
-    "moduleResolution": "node",
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "lib": ["ESNext", "DOM"],
-    "noEmit": true
+    "types": ["vitest/globals"],
   },
-  "include": [
-    "src",
-    "src/types"
-  ]
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ],
 }
