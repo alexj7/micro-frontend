@@ -65,7 +65,3 @@ Ejemplos:
 - Lazy loading de componentes o imágenes.
 - Mostrar loaders o skeletons mientras llegan datos.
 - Server-side streaming para renderizar contenido poco a poco (usado en frameworks modernos como Next.js).
-
----
-
-✨ **Fin del documento.******

@@ -4,6 +4,8 @@ Este repositorio contiene un sistema completo basado en Microfrontends desacopla
 
 El desarollo contiene **solo tres** proyectos completamente independientes que implementan una arquitectura de microfrontends, con sus respectivas pruebas untarias en component y hooks de acuerdo a los requerimientos del challenge.
 
+Las respuestas a las preguntas del challenge se encuentran en [QUESTIONS.md](./QUESTIONS.md).
+
 ## Notas
 
 - Para facilitar la lectura y pruebas del mismo se incorporaron los 3 proyectos en un mismo repositorio. 
@@ -11,6 +13,7 @@ El desarollo contiene **solo tres** proyectos completamente independientes que i
 - Cada proyecto (host y micros) puede funcionar de forma completamente independiente.
 
 - Cada proyecto tiene su propio Readme explicando su instalacion y estructura.
+
 
 ## Estructura:
 
