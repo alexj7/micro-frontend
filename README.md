@@ -2,7 +2,7 @@
 
 Este repositorio contiene un sistema completo basado en Microfrontends desacoplados, implementados con React 19, Vite, y Module Federation.
 
-El desarollo contiene **solo tres** proyectos completamente independientes que implementan una arquitectura de microfrontends, de acuerdo a los requerimientos del challenge.
+El desarollo contiene **solo tres** proyectos completamente independientes que implementan una arquitectura de microfrontends, con sus respectivas pruebas untarias en component y hooks de acuerdo a los requerimientos del challenge.
 
 ## Notas
 

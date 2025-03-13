@@ -1,10 +1,35 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import { I18nextProvider } from "react-i18next";
-
-import Content from "../index";
 import i18n from "../../../i18n";
 
+const MockComponent = ({ testId }: { testId: string }) => (
+  <div data-testid={testId}>Mock {testId}</div>
+);
+
+vi.mock("react", async (importOriginal) => {
+  const React = await importOriginal<typeof import("react")>();
+
+  const lazy = (factory: any) => {
+    const factoryString = factory.toString();
+
+    if (factoryString.includes("micro-character-list-1")) {
+      return () => <MockComponent testId="micro-1" />;
+    }
+    if (factoryString.includes("micro-character-list-2")) {
+      return () => <MockComponent testId="micro-2" />;
+    }
+
+    return () => <div>Unknown Lazy Component</div>;
+  };
+
+  return {
+    ...React,
+    lazy,
+  };
+});
+
+import Content from "../index";
 
 describe("Content Component", () => {
   const renderWithProviders = (component: React.ReactNode) => {
@@ -26,5 +51,4 @@ describe("Content Component", () => {
     expect(screen.queryByTestId("micro-1")).not.toBeInTheDocument();
     expect(screen.queryByTestId("micro-2")).not.toBeInTheDocument();
   });
-
 });
