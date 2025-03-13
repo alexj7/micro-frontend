@@ -14,7 +14,7 @@ const ContentDisplay = ({ selected }: Props) => {
 
   return (
     <Content>
-      <Suspense fallback={<Loader>{t("loading")}</Loader>}>
+      <Suspense fallback={<p>{t("loading")}</p>}>
         {selected === "MCList1" && <MCList1 />}
         {selected === "MCList2" && <MCList2 />}
       </Suspense>

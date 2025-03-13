@@ -12,7 +12,6 @@ export const colors = {
 };
 
 export const Container = styled.div`
-  width: 100vw; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -75,6 +74,7 @@ export const Content = styled.div`
   border-radius: 16px;
   box-shadow: 0 4px 16px ${colors.shadow};
   padding: 24px;
+  text-align: center;
 `;
 
 export const Loader = styled.div`
