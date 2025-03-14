@@ -7,8 +7,9 @@ export interface Character {
     gender?: string;
 }
 
+const api = 'https://hp-api.onrender.com/api/characters';
 export const fetchCharacters = async (): Promise<Character[]> => {
-    const response = await fetch('https://hp-api.onrender.com/api/characters');
+    const response = await fetch(api);
     const data = await response.json();
 
     return data.slice(0, 20);

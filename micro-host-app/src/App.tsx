@@ -6,6 +6,7 @@ import { Container } from "./styles/layout";
 import Header from "./components/Header";
 import Content from "./components/Content";
 import LanguageSelector from "./components/languageSelector";
+import ErrorBoundary from "./components/ErrorBoundary";
 
 const App = () => {
   console.log("ENV MODE:", import.meta.env.MODE);
@@ -15,7 +16,9 @@ const App = () => {
     <Container>
       <LanguageSelector />
       <Header selected={selectedList} onSelect={setSelectedList} />
-      <Content selected={selectedList} />
+      <ErrorBoundary>
+        <Content selected={selectedList} />
+      </ErrorBoundary>
     </Container>
   );
 };

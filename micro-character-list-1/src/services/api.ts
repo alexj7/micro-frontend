@@ -6,8 +6,9 @@ export interface Character {
     gender: string;
 }
 
+const api = 'https://rickandmortyapi.com/api/character';
 export const fetchCharacters = async (): Promise<Character[]> => {
-    const response = await fetch('https://rickandmortyapi.com/api/character');
+    const response = await fetch(api);
     const data = await response.json();
     return data.results;
 };;

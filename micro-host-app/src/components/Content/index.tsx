@@ -1,5 +1,5 @@
 import { Suspense, lazy } from "react";
-import { Content, Loader } from "../../styles/layout";
+import { Content } from "../../styles/layout";
 import { useTranslation } from "react-i18next";
 
 const MCList1 = lazy(() => import("micro-character-list-1/List"));

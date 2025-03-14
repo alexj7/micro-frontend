@@ -1,9 +1,13 @@
 {
-    "title": "Select your favorite series or movie",
-    "rick": "See Rick and Morty",
-    "harry": "See Harry Potter",
-    "loading": "Loading characters...",
-    "species": "Species",
-    "house": "House",
-    "gender": "gender"
+  "title": "Select your favorite series or movie",
+  "rick": "See Rick and Morty",
+  "harry": "See Harry Potter",
+  "loading": "Loading characters...",
+  "species": "Species",
+  "house": "House",
+  "gender": "gender",
+  "error": {
+    "title": "⚠️ An error occurred when loading the content.",
+    "message": "Please try again later."
   }
+}

@@ -5,5 +5,9 @@
   "loading": "Cargando personajes...",
   "species": "Especie",
   "house": "Casa",
-  "gender": "Género"
+  "gender": "Género",
+  "error": {
+    "title": "⚠️ Ocurrio un error al cargar el contenido.",
+    "message": "Por favor intenet mas tarde."
+  }
 }
